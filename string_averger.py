@@ -1,3 +1,8 @@
+# This will be the largest, most authentic program you've
+# written so far. It will require everything you've learned
+# and should take some time to test and debug. Be patient,
+# you can do it!
+#
 # Write a function called average_word_length that takes as
 # input a string called my_string, and returns as output the
 # average length of the words in the string.

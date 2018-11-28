@@ -1,15 +1,19 @@
 # I think there is a problem with this "problem"
 # Interlude 3.4.2: Functions Returning None
 
+
 def some_function_1(i, j):
     print(i + j)
 
 result1 = some_function_1(5, 6)
 
+
 def some_function_2(i, j):
     return i + j
 
+
 result2 = some_function_2(5, 6)
+
 
 def some_function_3(i, j, k):
     product = i * j
@@ -26,11 +30,13 @@ def some_function_4(strokes, par):
 
 result4 = some_function_4(5, 4)
 
+
 def some_function_5(total, tax):
     print("Your total is", total * tax)
     return None
 
 result5 = some_function_5(15.99, 1.08)
+
 
 def some_function_6(i):
     the_square = i ** 2
@@ -39,6 +45,7 @@ def some_function_6(i):
 
 result6 = some_function_6(5)
 
+
 def some_function_7(j):
     the_cube = i ** 3
     return None
@@ -46,7 +53,6 @@ def some_function_7(j):
 
 # i vs j in the input parameter
 # result7 = some_function_7(5)
-
 
 def some_function_8(l, w, h):
     return print(l * w * h)

@@ -24,4 +24,5 @@ my_boolean = True
 # Print their types here!
 print(type(my_integer))
 print(type(my_decimal))
+print(type(my_string))
 print(type(my_boolean))

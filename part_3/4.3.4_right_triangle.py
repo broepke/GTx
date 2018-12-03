@@ -1,6 +1,3 @@
-import math
-
-
 # Write a function called solve_right_triangle. The function
 # solve_right_triangle should have three parameters: opposite,
 # adjacent, and use_degrees. opposite and adjacent will be
@@ -23,18 +20,21 @@ import math
 #
 # angle_in_degrees = math.degrees(angle_in_radians)
 
+import math
+
 
 # Write your function here!
 def solve_right_triangle(opposite, adjacent, use_degrees=False):
-    # angle_in_degrees = math.degrees(angle_in_radians)
 
     hyp = math.sqrt(opposite ** 2 + adjacent ** 2)
-    hyp2 = math.atan(opposite / adjacent)
+    arctan = math.atan(opposite / adjacent)
 
-    print(hyp)
-    print(hyp2)
+    if use_degrees:
+        arctan = math.degrees(arctan)
 
-    return hyp
+    my_tuple = (hyp, arctan)
+
+    return my_tuple
 
 
 # Below are some lines of code that will test your function.

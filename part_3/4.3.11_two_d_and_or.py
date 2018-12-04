@@ -41,14 +41,30 @@ def two_dimensional_booleans(bool_list, use_and):
 
     if use_and:
 
-        if not use_and:
-            return True in bool_list
+        for i in bool_list:
+            if bool_list[0] or bool_list[1]:
+                if not False in i:
+                    return_list.append(True)
+                else:
+                    return_list.append(False)
 
-        else:
-            return not False in bool_list
+            elif bool_list[2]:
+                return_list.append(False)
 
     else:
-        return 
+
+        for i in bool_list:
+            if bool_list[0] or bool_list[1]:
+                if True in i:
+                    return_list.append(True)
+                else:
+                    return_list.append(False)
+
+            elif bool_list[2]:
+                return_list.append(False)
+
+
+    return return_list
 
 
 # Below are some lines of code that will test your function.

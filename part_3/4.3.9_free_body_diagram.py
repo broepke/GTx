@@ -59,28 +59,6 @@ from math import sin, cos, tan, asin, acos, atan2, radians, degrees, sqrt
 # Add your function here!
 def find_net_force(a_list):
 
-    magnitude = 10
-    angle = 90
-
-    # - For each force, break the force into its horizontal and
-    #   vertical components. The horizontal component can be
-    #   calculated as magnitude * cos(angle), and the vertical
-    #   component can be calculated as magnitude * sin(angle).
-    horizontal = magnitude * cos(angle)
-    vertical = magnitude * sin(angle)
-
-    # - Sum all the horizontal components to find the total
-    #   horizontal force, and sum the vertical components to find
-    #   the total vertical force.
-    total_horz_force = horizontal
-    total_vert_force = vertical
-
-    # - Use the Pythagorean theorem to calculate the total
-    #   magnitude: sqrt(total_horizontal ^ 2 + total_vertical ^ 2)
-
-    # - Use inverse tangent to calculate the angle:
-    #   atan(total_vertical / total_horizontal)
-
     answer = ()
 
     return

@@ -34,6 +34,7 @@
 
 from math import sin, cos, tan, asin, acos, atan2, radians, degrees, sqrt
 
+
 # sin, cos, and tan are the trigonometric functions for sine,
 # cosine, and tangent. Each takes one argument, an angle in
 # radians, and returns its sine, cosine, or tangent.
@@ -58,10 +59,25 @@ from math import sin, cos, tan, asin, acos, atan2, radians, degrees, sqrt
 
 # Add your function here!
 def find_net_force(a_list):
+    total_horizontal = 0
+    total_vertical = 0
 
-    answer = ()
+    # sum the total horizontal and vertical forces
+    for i in a_list:
+        total_horizontal = total_horizontal + (i[0] * cos(radians(i[1])))
+        total_vertical = total_vertical + (i[0] * sin(radians(i[1])))
 
-    return
+    # - Use the Pythagorean theorem to calculate the total
+    total_magnitude = sqrt(total_horizontal ** 2 + total_vertical ** 2)
+
+    # - Use inverse tangent to calculate the angle:
+    fin_angle = atan2(total_vertical, total_horizontal)
+    fin_angle = degrees(fin_angle)
+
+    answer = (round(total_magnitude, 1), round(fin_angle, 1))
+
+    return answer
+
 
 # Below are some lines of code that will test your function.
 # You can change the value of the variable(s) to test your

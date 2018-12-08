@@ -57,6 +57,8 @@ def find_net_force_from_file(a_file):
 
     answer = (round(total_magnitude, 1), round(fin_angle, 1))
 
+    my_file.close()
+
     return answer
 
 

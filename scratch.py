@@ -1,9 +1,5 @@
-my_list = [["a", 2], ["b", 1]]
+int1 = 100
+int2 = -100
 
-
-def takeSecond(elem):
-    return elem[1]
-
-my_list.sort(key=takeSecond)
-
-print(my_list)
+print(int1.__abs__())
+print(int2.__abs__())

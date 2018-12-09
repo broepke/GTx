@@ -1,0 +1,72 @@
+00	MARTA Training
+01	CTS Test Lab 1
+02	Test Bus Facility
+03	HPEM Lab
+04	MARTA Training 2
+05	NO USE Rail Facility
+06	NO USE Bus Facility
+07	ESIL Rail Facility
+08	ESIL Bus Facility
+09	Cobb Garage
+13	Bankhead
+14	MARTA Rail Station
+15	SAT-Facility
+16	Chamblee Encoding Facility
+18	Sandy Springs
+19	Garnett
+20	Brookhaven
+21	Ashby
+22	Five Points
+23	Vine City
+24	Dome/GWCC
+25	West Lake
+26	H. E. Holmes
+27	Georgia State
+28	King Memorial
+29	Inman Park
+30	Edgewood/Candler Park
+31	East Lake
+32	Decatur
+33	Avondale
+34	Kensington
+35	Indian Creek
+36	West End
+37	Oakland City
+38	Lakewood/Ft McPherson
+39	East Point
+40	College Park
+41	Airport
+42	Peachtree Center
+43	Civic Center
+44	North Avenue
+45	Midtown
+46	Arts Center
+47	Lindbergh Center
+48	Lenox
+49	Chamblee
+50	Doraville
+51	Buckhead
+52	Medical Center
+53	Dunwoody
+54	North Springs
+55	Laredo Garage
+56	Perry Garage
+57	Hamilton Garage
+58	Brady Garage
+60	Garnett Cash Handling Facility
+61	Gwinnett
+62	GRTA Garage
+63	CTRAN Garage
+64	CTRAN - Airport
+65	No_ USE_Bus_Facility
+66	Lenox Parking
+67	Medical Center - Parking
+68	College Park - Parking
+69	GRTA Garage - American Coach
+70	GRTA Garage - Frontage Road
+71	CCT- Marietta Transfer Center
+72	CCT-Cumberland Transfer Center
+73	CCT-Acworth Park and Ride Lot
+74	Rail Station Wireless AP
+75	Pre-Prod Test Gate
+76	Atlanta Streetcar

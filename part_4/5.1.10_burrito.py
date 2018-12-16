@@ -1,47 +1,20 @@
-# Copy your Burrito class from the last exercise. Now,
-# write a getter and a setter method for each attribute.
-# Each setter should accept a value as an argument. If the
-# value is a valid value, it should set the corresponding
-# attribute to the given value. Otherwise, it should set the
-# attribute to False.
+# Copy your Burrito class from the last exercise. Now, add
+# a method called "get_cost" to the Burrito class. It should
+# accept zero arguments (except for "self", of course) and
+# it will return a float. Here's how the cost should be
+# computed:
 #
-# Edit the constructor to use these new setters and getters.
-# In other words, if we were to call:
+# - The base cost of a burrito is $5.00
+# - If the burrito's meat is "chicken", "pork" or "tofu",
+#   add $1.00 to the cost
+# - If the burrito's meat is "steak", add $1.50 to the cost
+# - If extra_meat is True and meat is not set to False, add
+#   $1.00 to the cost
+# - If guacamole is True, add $0.75 to the cost
 #
-# new_burrito = Burrito("spaghetti", True, True, False)
-#
-# new_burrito.meat would be False because "spaghetti" is not
-# one of the valid options. Note that you should NOT try to
-# check if the new value is valid in both the constructor and
-# the setter: instead, just call the setter from the
-# constructor using something like self.set_meat(meat).
-#
-# Valid values for each setter are as follows:
-#
-# - set_meat: "chicken", "pork", "steak", "tofu", False
-# - set_to_go: True, False
-# - set_rice: "brown", "white", False
-# - set_beans: "black", "pinto", False
-# - set_extra_meat: True, False
-# - set_guacamole: True, False
-# - set_cheese: True, False
-# - set_pico: True, False
-# - set_corn: True, False
-#
-# Make sure you name each setter with the format:
-# "set_some_attribute" and "get_some_attribute"
-#
-# For example, the getter for meat would be get_meat. The
-# getter for to_go would be get_to_go.
-#
-# Hint: Your code is going to end up *very* long. This
-# will be the longest program you've written so far, but
-# it isn't the most complex. Complexity and length are
-# often very different!
-#
-# Hint 2: Checking for valid values will be much easier
-# if you make a list of valid values for each attribute
-# and check the new value against that.
+# Make sure to return the result as a float even if the total
+# is a round number (e.g. for burrito with no meat or
+# guacamole, return 5.0 instead of 5).
 
 
 # Write your code here!
@@ -148,11 +121,44 @@ class Burrito:
     def get_corn(self):
         return self.corn
 
+    def get_cost(self):
 
-# Feel free to add code below to test out the class that
-# you've written. It won't be used for grading.
+        cost = 5.00
+        costly_meat = ["chicken", "pork", "tofu"]
 
-burrito_1 = Burrito("steak", True, "brown", True)
+        if self.meat in costly_meat:
+            cost += 1.0
 
-burrito_1.set_pico("keel")
-print(burrito_1.get_pico())
+        if self.meat == "steak":
+            cost += 1.5
+
+        if self.extra_meat and self.meat:
+            cost += 1.0
+
+        if self.guacamole:
+            cost += 0.75
+
+        return cost
+
+
+# - The base cost of a burrito is $5.00
+# - If the burrito's meat is "chicken", "pork" or "tofu",
+#   add $1.00 to the cost
+# - If the burrito's meat is "steak", add $1.50 to the cost
+# - If extra_meat is True and meat is not set to False, add
+#   $1.00 to the cost
+# - If guacamole is True, add $0.75 to the cost
+#
+# Make sure to return the result as a float even if the total
+# is a round number (e.g. for burrito with no meat or
+# guacamole, return 5.0 instead of 5).
+
+
+# Below are some lines of code that will test your class.
+# You can change the value of the variable(s) to test your
+# class with different inputs.
+#
+# If your function works correctly, this will originally
+# print: 7.75
+a_burrito = Burrito("pork", False, "white", "black", extra_meat=True, guacamole=True)
+print(a_burrito.get_cost())

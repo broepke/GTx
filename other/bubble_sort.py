@@ -21,7 +21,11 @@ def sort_with_bubbles(lst):
                 lst[i + 1] = temp
                 swap_occurred = True
 
+        print(lst)
+
     return lst
 
 
-print(sort_with_bubbles([5, 3, 1, 2, 4]))
+print(sort_with_bubbles([3, 2, 5, 6, 4, 1]))
+
+

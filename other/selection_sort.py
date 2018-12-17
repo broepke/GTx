@@ -22,7 +22,11 @@ def sort_with_select(a_list):
 
         a_list.insert(i, minValue)
 
+        print(a_list)
+
     return a_list
 
 
-print(sort_with_select([5, 3, 1, 2, 4]))
+print(sort_with_select([3, 2, 5, 6, 4, 1]))
+
+# 3 2 5 6 4 1

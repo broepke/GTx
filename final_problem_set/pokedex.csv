@@ -1,0 +1,27 @@
+Number,Name,Type1,Type2,HP,Attack,Defense,SpecialAtk,SpecialDef,Speed,Generation,Legendary,Mega
+1,Bulbasaur,Grass,Poison,45,49,49,65,65,45,1,TRUE,FALSE
+2,Ivysaur,Grass,Poison,60,62,63,80,80,60,1,TRUE,FALSE
+3,Venusaur,Grass,Poison,80,82,83,100,100,80,1,FALSE,FALSE
+3,Mega Venusaur,Grass,Poison,80,100,123,122,120,80,1,FALSE,TRUE
+4,Charmander,Fire,,39,52,43,60,50,65,1,FALSE,FALSE
+5,Charmeleon,Fire,,58,64,58,80,65,80,1,FALSE,FALSE
+6,Charizard,Fire,Flying,78,84,78,109,85,100,1,FALSE,FALSE
+6,Mega Charizard X,Fire,Dragon,78,130,111,130,85,100,1,FALSE,TRUE
+6,Mega Charizard Y,Fire,Flying,78,104,78,159,115,100,1,TRUE,TRUE
+7,Squirtle,Water,,44,48,65,50,64,43,1,FALSE,FALSE
+8,Wartortle,Water,,59,63,80,65,80,58,1,FALSE,FALSE
+9,Blastoise,Water,,79,83,100,85,105,78,1,FALSE,FALSE
+9,Mega Blastoise,Water,,79,103,120,135,115,78,1,FALSE,TRUE
+10,Caterpie,Bug,,45,30,35,20,20,45,1,FALSE,FALSE
+11,Metapod,Bug,,50,20,55,25,25,30,1,FALSE,FALSE
+12,Butterfree,Bug,Flying,60,45,50,90,80,70,1,FALSE,FALSE
+13,Weedle,Bug,Poison,40,35,30,20,20,50,1,FALSE,FALSE
+14,Kakuna,Bug,Poison,45,25,50,25,25,35,1,FALSE,FALSE
+15,Beedrill,Bug,Poison,65,90,40,45,80,75,1,FALSE,FALSE
+15,Mega Beedrill,Bug,Poison,65,150,40,15,80,145,1,FALSE,TRUE
+16,Pidgey,Normal,Flying,40,45,40,35,35,56,1,FALSE,FALSE
+17,Pidgeotto,Normal,Flying,63,60,55,50,50,71,1,FALSE,FALSE
+18,Pidgeot,Normal,Flying,83,80,75,70,70,101,2,FALSE,FALSE
+18,Mega Pidgeot,Normal,Flying,83,80,80,135,80,121,2,FALSE,TRUE
+19,Rattata,Normal,,30,56,35,25,35,72,2,FALSE,FALSE
+20,Raticate,Normal,,55,81,60,50,70,97,2,FALSE,FALSE

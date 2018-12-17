@@ -34,6 +34,40 @@
 
 
 # Add your code here!
+def check_plagiarism(file1, file2):
+    file1 = open(file1, "r")
+    file2 = open(file2, "r")
+
+    file1_str = file1.read()
+    file2_list = file2.read().split()
+    biggest_string_index = 5
+    biggest_string = ""
+
+
+    for i in range(len(file2_list)-4):
+        check_string = file2_list[i] + " " + file2_list[i + 1] + " " + file2_list[i + 2] + " " + file2_list[i + 3] + " " + file2_list[i + 4]
+        if file1_str.find(check_string) > 0:
+            if biggest_string == "":
+                biggest_string = check_string
+            for j in range(len(file2_list)):
+                try:
+                    check_string = check_string + " " + file2_list[i+5+j]
+                    if file1_str.find(check_string) > 0:
+                        if biggest_string_index < i+5+j:
+                            biggest_string = check_string
+                            biggest_string_index = i+5+j
+                    else:
+                        break
+                except:
+                    j += 1
+
+    file1.close()
+    file2.close()
+
+    if biggest_string == "":
+        biggest_string = False
+
+    return biggest_string
 
 
 # Below are some lines of code that will test your function.
@@ -45,6 +79,11 @@
 # if i go crazy then
 # i left my body lying somewhere in the sands of time
 # False
-print(check_plagiarism("file_1.txt", "file_2.txt"))
-print(check_plagiarism("file_1.txt", "file_3.txt"))
-print(check_plagiarism("file_2.txt", "file_3.txt"))
+# print(check_plagiarism("file_1.txt", "file_2.txt"))
+# print(check_plagiarism("file_1.txt", "file_3.txt"))
+# print(check_plagiarism("file_2.txt", "file_3.txt"))
+print(check_plagiarism("file_qeljHc.txt", "file_xIFnml.txt"))
+
+
+# "yawn catalytic prepare pneumatic mo corroboree euler tetanus reservation octoroon".
+# "catalytic prepare pneumatic mo corroboree euler tetanus reservation octoroon".

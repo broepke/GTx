@@ -113,24 +113,33 @@ CIPHER = (("D", "A", "V", "I", "O"),
           ("L", "M", "P", "Q", "S"),
           ("T", "U", "W", "X", "Z"))
 
+
 # Add your code here!
-def strip_string(a_string):
+def encrypt(e_string):
+    punctuation = "!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\""
 
-    punctuation = ["!", ",", ".","@", ""]
+    for char in punctuation:
+        e_string = e_string.replace(char, "")
+
+    e_string = e_string.upper()
+    e_string = e_string.replace("J", "I")
+    e_string = e_string.replace(" ", "")
+
+    if len(e_string) % 2 > 0:
+        e_string += "X"
+
+    # replace repeated second letters
+    for i in range(len(e_string) - 1):
+        if e_string[i] == e_string[i + 1]:
+            e_string = e_string[:i + 1] + "X" + e_string[i + 2:]
+        i += 1
+
+    return e_string
 
 
-    return a_string
+def decrypt(d_string):
+    return d_string
 
-
-def encrypt():
-
-
-    return
-
-def decrypt():
-
-
-    return
 
 # Below are some lines of code that will test your function.
 # You can change the value of the variable(s) to test your
@@ -138,5 +147,5 @@ def decrypt():
 #
 # If your function works correctly, this will originally
 # print: QLGRQTVZIBTYQZ, then PSHELXOWORLDSX
-print(encrypt("PS. Hello, world"))
+print(encrypt("PS. Hello, worlds!"))
 print(decrypt("QLGRQTVZIBTYQZ"))

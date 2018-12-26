@@ -107,34 +107,65 @@
 #
 # To make this easier, we've gone ahead and created the
 # cipher as a 2D tuple for you:
-CIPHER = (("D", "A", "V", "I", "O"),
-          ("Y", "N", "E", "R", "B"),
-          ("C", "F", "G", "H", "K"),
-          ("L", "M", "P", "Q", "S"),
-          ("T", "U", "W", "X", "Z"))
 
 
 # Add your code here!
 def encrypt(e_string):
-    punctuation = "!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\""
+    cipher = (("D", "A", "V", "I", "O"),
+              ("Y", "N", "E", "R", "B"),
+              ("C", "F", "G", "H", "K"),
+              ("L", "M", "P", "Q", "S"),
+              ("T", "U", "W", "X", "Z"))
 
+    # Convert the string to uppercase.
+    e_string = e_string.upper()
+
+    # Replace all Js with Is.
+    e_string = e_string.replace("J", "I")
+
+    # Remove all non-letter characters.
+    punctuation = "!#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\""
     for char in punctuation:
         e_string = e_string.replace(char, "")
 
-    e_string = e_string.upper()
-    e_string = e_string.replace("J", "I")
     e_string = e_string.replace(" ", "")
 
+    # Add an X to the end if the length if odd.
     if len(e_string) % 2 > 0:
         e_string += "X"
 
-    # replace repeated second letters
+    # Replace the second letter of any same-character pair with X (e.g. LL -> LX).
     for i in range(len(e_string) - 1):
         if e_string[i] == e_string[i + 1]:
             e_string = e_string[:i + 1] + "X" + e_string[i + 2:]
         i += 1
 
-    return e_string
+    # Break the string into character pairs.
+    e_string_list = []
+    for i in range(round(len(e_string) / 2)):
+        e_string_list.append(e_string[:2])
+        e_string = e_string[2:]
+        i += 1
+
+
+
+    # find the letter in the cypher
+    location = []
+    # for row in cipher:
+    #     for item in row:
+    #         if item == "P":
+    #             location = item
+
+    i = None
+    for index, item in enumerate(cipher):
+        if item[index] == "P":
+            i = index
+            break
+
+    print(i)
+
+
+    return e_string_list
 
 
 def decrypt(d_string):

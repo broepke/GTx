@@ -1,17 +1,15 @@
-import numpy as np
-import pandas as pd
+import string
+import collections
 
-another = np.array([[11, 12, 13], [21, 22, 23]])  # Create a rank 2 array
+punct = string.punctuation
+print(punct)
 
-print(another)  # print the array
+my_text = open("text.txt", "r")
 
-print("The shape is 2 rows, 3 columns: ", another.shape)  # rows x columns
+for line in my_text:
+      line_list = line.split()
 
-print("Accessing elements [0,0], [0,1], and [1,0] of the ndarray: ", another[0, 0], ", ", another[0, 1], ", ",
-      another[1, 0])
-
-an_eye = np.eye(5,5)
-
-print(an_eye)
+print({word:True for word in my_text})
 
 
+my_text.close()

@@ -1,1 +1,3 @@
-# Introduction to Computing with Python at Georgia Tech on edX
+# Introduction to Python Programming from GTx
+
+https://www.edx.org/professional-certificate/introduction-to-python-programming
